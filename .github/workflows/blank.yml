@@ -16,22 +16,22 @@ jobs:
   Job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Convert Markdown to HTML
         uses: ZacJW/markdown-html-action@1.1.0
         with:
-          input_files: '[["status/dsa110.md"]]'
-          output_files: '["status/dsa110.html"]'
+          input_files: '[["status/*.md"]]'
+          output_files: '["out.html"]'
 #          builtin_stylesheet: 'style.css'
           packages: 'pymdown-extensions'
           extensions: '["pymdownx.extra"]'
-
-      - name: Checkout
-        uses: actions/checkout@v2
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v8
         with:
           author_name: Casey Law
           author_email: caseyjlaw@gmail.com
-          message: 'Made dsa110.html'
-          add: './status/*.html'
+          message: 'commit html'
+          add: '*.html'
