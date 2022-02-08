@@ -21,10 +21,12 @@ jobs:
         uses: ZacJW/markdown-html-action@1.1.0
         with:
           input_files: '[["dsa110.md"]]'
-          output_files: '["out1.html"]'
+          output_files: '["dsa110.html"]'
 #          builtin_stylesheet: 'style.css'
           packages: 'pymdown-extensions'
           extensions: '["pymdownx.extra"]'
-#        uses: natescherer/markdown-to-html-with-github-style-action@v1.1.0
-#        with:
-#          path: $GITHUB_WORKSPACE/status/dsa110.md
+      - name: Archive results
+        uses: actions/upload-artifact@v2
+        with:
+          name: dsa110
+          path: dsa110.html
