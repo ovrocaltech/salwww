@@ -19,10 +19,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - run: cat status/*.md > status/include.md
+        shell: bash
+
       - name: Convert Markdown to HTML
         uses: ZacJW/markdown-html-action@1.1.0
         with:
-          input_files: '[["status/*.md"]]'
+          input_files: '[["status/include.md"]]'
           output_files: '["status/include.html"]'
 #          builtin_stylesheet: 'style.css'
           packages: 'pymdown-extensions'
