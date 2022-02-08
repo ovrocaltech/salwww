@@ -18,6 +18,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Convert Markdown to HTML
-        uses: natescherer/markdown-to-html-with-github-style-action@v1.1.0
+        uses: ZacJW/markdown-html-action@1.1.0
         with:
-          path: $GITHUB_WORKSPACE/status/dsa110.md
+          input_files: '[["*.md"]]'
+          output_files: '["out1.html", "out2.html"]'
+#          builtin_stylesheet: 'style.css'
+          packages: 'pymdown-extensions'
+          extensions: '["pymdownx.extra"]'
+#        uses: natescherer/markdown-to-html-with-github-style-action@v1.1.0
+#        with:
+#          path: $GITHUB_WORKSPACE/status/dsa110.md
