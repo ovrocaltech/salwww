@@ -20,7 +20,7 @@ jobs:
         uses: ZacJW/markdown-html-action@1.1.0
         with:
           input_files: '[["status/dsa110.md"]]'
-          output_files: '["dsa110.html"]'
+          output_files: '["status/dsa110.html"]'
 #          builtin_stylesheet: 'style.css'
           packages: 'pymdown-extensions'
           extensions: '["pymdownx.extra"]'
@@ -34,4 +34,4 @@ jobs:
           author_name: Casey Law
           author_email: caseyjlaw@gmail.com
           message: 'Made dsa110.html'
-          add: '.'
+          add: 'status/*.html'
