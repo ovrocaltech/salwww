@@ -27,7 +27,8 @@ jobs:
           extensions: '["pymdownx.extra"]'
       - name: Add artifact to branch
         uses: actions/download-artifact@v2
-        path: dsa110.html
+	with:
+          path: dsa110.html
       - name: download artifacts
         uses: actions/checkout@v2
       - name: Commit changes
