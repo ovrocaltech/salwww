@@ -25,6 +25,7 @@ jobs:
 #          builtin_stylesheet: 'style.css'
           packages: 'pymdown-extensions'
           extensions: '["pymdownx.extra"]'
+      - uses: actions/checkout@v2
       - name: Commit changes
         uses: EndBug/add-and-commit@v8
         with:
