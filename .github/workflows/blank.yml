@@ -25,7 +25,10 @@ jobs:
 #          builtin_stylesheet: 'style.css'
           packages: 'pymdown-extensions'
           extensions: '["pymdownx.extra"]'
-      - uses: actions/checkout@v2
+      - name: Add artifact to branch
+        uses: actions/download-artifact@v2
+      - name: download artifacts
+        uses: actions/checkout@v2
       - name: Commit changes
         uses: EndBug/add-and-commit@v8
         with:
@@ -33,8 +36,4 @@ jobs:
           author_email: caseyjlaw@gmail.com
           message: 'Made dsa110.html'
           add: 'dsa110.html'
-#- name: Archive results
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: dsa110
-#          path: dsa110.html
+	  push: true
