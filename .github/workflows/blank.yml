@@ -20,4 +20,4 @@ jobs:
       - name: Convert Markdown to HTML
         uses: natescherer/markdown-to-html-with-github-style-action@v1.1.0
         with:
-          path: status/dsa110.md
+          path: $GITHUB_WORKSPACE/status/dsa110.md
