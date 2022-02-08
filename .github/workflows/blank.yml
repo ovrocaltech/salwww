@@ -34,4 +34,4 @@ jobs:
           author_name: Casey Law
           author_email: caseyjlaw@gmail.com
           message: 'Made dsa110.html'
-          add: 'status/*.html'
+          add: './status/*.html'
