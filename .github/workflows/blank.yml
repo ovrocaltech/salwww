@@ -25,8 +25,15 @@ jobs:
 #          builtin_stylesheet: 'style.css'
           packages: 'pymdown-extensions'
           extensions: '["pymdownx.extra"]'
-      - name: Archive results
-        uses: actions/upload-artifact@v2
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v8
         with:
-          name: dsa110
-          path: dsa110.html
+          author_name: Casey Law
+          author_email: caseyjlaw@gmail.com
+          message: 'Made dsa110.html'
+          add: 'dsa110.html'
+#- name: Archive results
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: dsa110
+#          path: dsa110.html
