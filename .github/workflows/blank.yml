@@ -18,6 +18,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Convert Markdown to HTML
-      - uses: natescherer/markdown-to-html-with-github-style-action@v1.1.0
+        uses: natescherer/markdown-to-html-with-github-style-action@v1.1.0
         with:
           path: dsa110.md
