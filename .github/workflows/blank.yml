@@ -23,7 +23,7 @@ jobs:
         uses: ZacJW/markdown-html-action@1.1.0
         with:
           input_files: '[["status/*.md"]]'
-          output_files: '["out.html"]'
+          output_files: '["status/include.html"]'
 #          builtin_stylesheet: 'style.css'
           packages: 'pymdown-extensions'
           extensions: '["pymdownx.extra"]'
@@ -34,4 +34,4 @@ jobs:
           author_name: Casey Law
           author_email: caseyjlaw@gmail.com
           message: 'commit html'
-          add: '*.html'
+          add: 'status/*.html'
