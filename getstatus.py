@@ -1,12 +1,20 @@
 #!/usr/bin/env python
+import time
+import os.path
+
 
 projects = ['ovrolwa', 'dsa110']
 mdpath = './status/'
 
 # map group to service and service to server:port
-services = {'ovrolwa': {'webUI': '?'}, {'grafana': 'grafanaservice.lwa.pvt:3000'}, {'dashboard': 'lxdlwacr.sas.pvt:500?'},
-            'dsa110': {'webUI': 'webserverUIservice.sas.pvt:9090'}, {'grafana': 'grafanaservice.ovro.pvt:3000'},
-            {'dashboard': 'lxd110h23.sas.pvt:5008'}, {'hiplot': 'dsa-storage.ovro.pvt:5007'}, {'bokeh': 'bokehservice.ovro.pvt:5006'}}
+services = {'ovrolwa': {'webUI': '?', 'grafana': 'grafanaservice.lwa.pvt:3000', 'dashboard': 'lxdlwacr.sas.pvt:500?'},
+            'dsa110': {'webUI': 'webserverUIservice.sas.pvt:9090', 'grafana': 'grafanaservice.ovro.pvt:3000',
+            'dashboard': 'lxd110h23.sas.pvt:5008', 'hiplot': 'dsa-storage.ovro.pvt:5007', 'bokeh': 'bokehservice.ovro.pvt:5006'}}
+
+for project in projects:
+    with open(os.path.join(mdpath, f'{project}.md'), 'w') as fp:
+        for service in services[project].keys():
+            fp.write(f'{project} | {service} | Down | {time.ctime()}\n')
 
 # Projects are groups of servicese (e.g., OVRO-LWA, DSA-110)
 # Services are individual web apps (e.g., webUI, hiplot)
