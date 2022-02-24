@@ -11,7 +11,7 @@ mdpath = './status/'
 services = {'ovrolwa': {'webUI': None, 'grafana': 'grafanaservice.lwa.pvt:3000', 'dashboard': 'lxdlwacr.sas.pvt:500?'},
             'dsa110': {'webUI': 'webserverUIservice.sas.pvt:9090', 'grafana': 'grafanaservice.ovro.pvt:3000',
                        'dashboard': 'lxd110h23.sas.pvt:5008', 'hiplot': 'dsa-storage.ovro.pvt:5007',
-                       'bokeh': 'bokehservice.ovro.pvt:5006', 'archive': 'code.deepsynoptic.org/dsa110-archive'}}
+                       'bokeh': 'bokehservice.sas.pvt:5006', 'archive': 'code.deepsynoptic.org/dsa110-archive'}}
 
 for project in projects:
     with open(os.path.join(mdpath, f'{project}.md'), 'w') as fp:
