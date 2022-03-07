@@ -1,4 +1,5 @@
-ovrolwa | webUI | in development | Sat Mar  5 22:33:05 2022
-ovrolwa | grafana | Up | Sat Mar  5 22:33:05 2022
-ovrolwa | dashboard | Down | Sat Mar  5 22:33:05 2022
-ovrolwa | LWASNAP | Up | Sat Mar  5 22:33:06 2022
+ovrolwa | webUI | Down | Mon Mar  7 07:37:24 2022
+ovrolwa | grafana | Down | Mon Mar  7 07:37:24 2022
+ovrolwa | dashboard | Down | Mon Mar  7 07:37:24 2022
+ovrolwa | LWASNAP | Up | Mon Mar  7 07:37:25 2022
+ovrolwa | lwamaas | Down | Mon Mar  7 07:37:25 2022
