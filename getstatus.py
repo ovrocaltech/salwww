@@ -11,10 +11,13 @@ mdpath = './status/'
 services = {'ovrolwa': {'webUI': 'webserveruiservice.lwa.pvt:9090', 'grafana': 'grafanaservice.lwa.pvt:3000',
                         'dashboard': 'lxdlwacr.sas.pvt:5006', 'LWASNAP': 'greghell.github.io/LWASNAP',
                         'lwamaas': 'lxdlwamaas.lva.pvt:5240'},
-            'dsa110': {'webUI': 'webserverUIservice.sas.pvt:9090', 'grafana': 'grafanaservice.ovro.pvt:3000',
-                       'dashboard': 'lxd110h23.sas.pvt:5008', 'hiplot': 'dsa-storage.ovro.pvt:5007',
+            'dsa110': {'webUI': 'webserverUIservice.sas.pvt:9090', 'grafana': 'grafanaservice.sas.pvt:3000',
+                       'dashboard': 'lxd110h23.sas.pvt:5008', 'hiplot': None,
                        'bokeh': 'bokehservice.sas.pvt:5006', 'archive': 'code.deepsynoptic.org/dsa110-archive',
                        'dsa110maas': 'dsa110maas.ovro.pvt:5240'}}
+
+# TODO:
+# - need route to dsa-storage for hiplot: 'dsa-storage.ovro.pvt:5007'
 
 def run(project):
     """ Check services in project to make md files.
