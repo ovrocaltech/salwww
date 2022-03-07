@@ -18,6 +18,7 @@ services = {'ovrolwa': {'webUI': 'webserveruiservice.lwa.pvt:9090', 'grafana': '
 
 # TODO:
 # - need route to dsa-storage for hiplot: 'dsa-storage.ovro.pvt:5007'
+# - define scheme to render include.html that has richer interaction (e.g. bokeh plot)
 
 def run(project):
     """ Check services in project to make md files.
@@ -33,9 +34,10 @@ def run(project):
 
     with open(os.path.join(mdpath, f'{project}.md'), 'w') as fp:
         for service in services[project].keys():
-            url = f'http://{services[project][service]}'
-            print(url)
             if services[project][service] is not None:
+                url = f'http://{services[project][service]}'
+                print(f'Checking {url}')
+
                 status = 'Down'
                 try:
                     resp = requests.get(url)
@@ -47,14 +49,22 @@ def run(project):
                 status = 'in development'
             fp.write(f'{project} | {service} | {status} | {time.ctime()}\n')
 
-# TODO: define method to check status
-
-
-# TODO: define scheme to render include.html that has richer interaction (e.g. bokeh plot)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Get project name')
     parser.add_argument('project', help='project name')
+    parser.add_argument('--loop', help='repeat timescale in minutes (indefinite)', default=0, type=float)
     args = parser.parse_args()
 
-    run(args.project)
+    while True:
+        try:
+            run(args.project)
+        except KeyboardInterrupt:
+            print('Escaping loop...')
+
+        if not args.loop:
+            break
+        else:
+            print(f'Sleeping for {args.loop} minutes...')
+            time.sleep(args.loop*60)
+
