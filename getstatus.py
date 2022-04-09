@@ -3,7 +3,6 @@ import os.path
 import requests
 import argparse
 
-
 projects = ['ovrolwa', 'dsa110', 'ovro']
 mdpath = './status/'
 
@@ -13,11 +12,13 @@ services = {'ovrolwa': {'webUI': 'webserveruiservice.lwa.pvt:9090', 'grafana': '
                         'lwamaas': 'lwamaas.lwa.pvt:5240'},
             'dsa110': {'webUI': 'webserverUIservice.sas.pvt:9090', 'grafana': 'grafanaservice.sas.pvt:3000',
                        'dashboard': 'lxd110h23.sas.pvt:5008', 'hiplot': None,
-                       'bokeh': 'bokehservice.sas.pvt:5006', 'archive': 'code.deepsynoptic.org/dsa110-archive',
+                       'archive': 'code.deepsynoptic.org/dsa110-archive',
                        'dsa110maas': 'dsa110maas.ovro.pvt:5240'}}
+#'bokeh': 'bokehservice.sas.pvt:5006'  # deprecated
 
 # TODO:
 # - need route to dsa-storage for hiplot: 'dsa-storage.ovro.pvt:5007'
+# - automatic push
 # - define scheme to render include.html that has richer interaction (e.g. bokeh plot)
 
 def run(project):
