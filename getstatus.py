@@ -7,11 +7,11 @@ projects = ['ovrolwa', 'dsa110', 'ovro']
 mdpath = './status/'
 
 # map group to service and service to server:port
-services = {'ovrolwa': {'webUI': 'webserveruiservice.lwa.pvt:9090', 'grafana': 'grafanaservice.lwa.pvt:3000',
-                        'dashboard': 'lxdlwacr.sas.pvt:5006', 'LWASNAP': 'greghell.github.io/LWASNAP',
+services = {'ovrolwa': {'webUI': 'webserveruiservice.sas.pvt:9090', 'grafana': 'grafanaservice.sas.pvt:3000',
+                        'dashboard': 'lxdlwacr.lwa.pvt:5006', 'LWASNAP': 'greghell.github.io/LWASNAP',
                         'lwamaas': 'lwamaas.lwa.pvt:5240'},
             'dsa110': {'webUI': 'webserverUIservice.sas.pvt:9090', 'grafana': 'grafanaservice.sas.pvt:3000',
-                       'dashboard': 'lxd110h23.sas.pvt:5008', 'hiplot': None,
+                       'dashboard': 'dsa-storage.ovro.pvt:5008', 'hiplot': None,
                        'archive': 'code.deepsynoptic.org/dsa110-archive',
                        'dsa110maas': 'dsa110maas.ovro.pvt:5240'},
             'ovro': {}}
