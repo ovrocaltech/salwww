@@ -8,13 +8,13 @@ mdpath = './status/'
 
 # map group to service and service to server:port
 services = {'ovrolwa': {'webUI': 'webserveruiservice.sas.pvt:9090', 'grafana': 'grafanaservice.sas.pvt:3000',
-                        'dashboard': 'lxdlwacr.lwa.pvt:5006', 'LWASNAP': 'greghell.github.io/LWASNAP',
-                        'lwamaas': 'lwamaas.lwa.pvt:5240'},
+                        'dashboard': 'lwacalim10.mcs.pvt:5006', 'LWASNAP': 'greghell.github.io/LWASNAP'},
+#                        'lwamaas': 'lwamaas.lwa.pvt:5240'},
             'dsa110': {'webUI': 'webserverUIservice.sas.pvt:9090', 'grafana': 'grafanaservice.sas.pvt:3000',
-                       'dashboard': 'dsa-storage.ovro.pvt:5008', 'hiplot': None,
-                       'archive': 'code.deepsynoptic.org/dsa110-archive',
-                       'dsa110maas': 'dsa110maas.ovro.pvt:5240'},
-            'ovro': {}}
+                       #                       'dashboard': 'dsa-storage.ovro.pvt:5008',  # returns 200, but no page there
+                       'archive': 'code.deepsynoptic.org/dsa110-archive'},
+#                       'dsa110maas': 'dsa110maas.ovro.pvt:5240'},
+            'ovro': {'relay': '131.215.200.144:8001'}}
 #'bokeh': 'bokehservice.sas.pvt:5006'  # deprecated
 
 # TODO:
