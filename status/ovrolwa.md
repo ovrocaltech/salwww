@@ -1,5 +1,5 @@
-ovrolwa | webUI | Up | Sat Aug 19 21:28:49 2023
-ovrolwa | grafana | Up | Sat Aug 19 21:28:49 2023
-ovrolwa | dashboard | Down | Sat Aug 19 21:28:49 2023
-ovrolwa | LWASNAP | Up | Sat Aug 19 21:28:50 2023
-ovrolwa | lwamaas | Up | Sat Aug 19 21:28:50 2023
+ovrolwa | webUI | Up | Sun Feb  4 19:30:56 2024
+ovrolwa | grafana | Up | Sun Feb  4 19:30:56 2024
+ovrolwa | dashboard | Down | Sun Feb  4 19:30:56 2024
+ovrolwa | LWASNAP | Up | Sun Feb  4 19:30:56 2024
+ovrolwa | lwamaas | Up | Sun Feb  4 19:30:56 2024
