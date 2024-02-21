@@ -1,4 +1,4 @@
-ovrolwa | webUI | Up | Sun Feb  4 20:32:04 2024
-ovrolwa | grafana | Up | Sun Feb  4 20:32:04 2024
-ovrolwa | dashboard | Up | Sun Feb  4 20:32:07 2024
-ovrolwa | LWASNAP | Up | Sun Feb  4 20:32:08 2024
+ovrolwa | webUI | Up | Wed Feb 21 18:22:36 2024
+ovrolwa | grafana | Up | Wed Feb 21 18:22:36 2024
+ovrolwa | dashboard | Up | Wed Feb 21 18:22:40 2024
+ovrolwa | LWASNAP | Up | Wed Feb 21 18:22:40 2024
