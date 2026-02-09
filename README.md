@@ -37,10 +37,22 @@ python3 -m http.server 8000 --directory docs
 
 1. In the repo: **Settings → Pages**.
 2. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-3. Set **Branch** to `main`, folder to **/ (root)**, then choose **/docs**.
-4. Save. The site will be published at `https://<owner>.github.io/salwww/`.
+3. Set **Branch** to `main`, folder to **/docs**, then save.
+4. **Custom domain:** Under **Custom domain**, enter `salab.caltech.edu`, then **Save**. Optionally enable **Enforce HTTPS** after DNS has propagated.
 
-(If the repo is in an organization, replace `<owner>` with the org name.)
+The site will be available at **https://salab.caltech.edu** once DNS is configured.
+
+### DNS (at Caltech)
+
+Add a **CNAME** record so the custom domain points to GitHub Pages:
+
+| Type  | Name  | Value                 |
+|-------|-------|------------------------|
+| CNAME | salab | ovrocaltech.github.io  |
+
+(If `salab` is the full hostname in your DNS UI, use `salab.caltech.edu` as Name, or whatever your DNS provider expects for the subdomain.)
+
+After saving DNS, wait for propagation (minutes to hours). GitHub will then serve the site at https://salab.caltech.edu and you can turn on **Enforce HTTPS** in Settings → Pages.
 
 ## Archive
 
