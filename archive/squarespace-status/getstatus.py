@@ -75,4 +75,3 @@ if __name__ == '__main__':
         else:
             print(f'Sleeping for {args.loop} minutes...')
             time.sleep(args.loop*60)
-

@@ -1,0 +1,227 @@
+/* OVRO SAL static site - minimal layout and typography */
+
+:root {
+  --color-bg: #fff;
+  --color-text: #1a1a1a;
+  --color-muted: #555;
+  --color-link: #0066aa;
+  --color-link-visited: #551a8b;
+  --color-border: #ddd;
+  --color-card-bg: #f8f9fa;
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --space: 1rem;
+  --max-width: 56rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.site-header {
+  padding: var(--space) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header .wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space);
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.site-title a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  color: var(--color-link);
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a[aria-current="page"] {
+  font-weight: 600;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: calc(var(--space) * 2) var(--space);
+}
+
+main .wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h1 { font-size: 1.75rem; margin-top: 0; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.1rem; }
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+/* Landing hero + cards */
+.hero {
+  margin-bottom: 2rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+}
+
+.telescope-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space);
+  margin-top: 2rem;
+}
+
+.telescope-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.telescope-card a {
+  display: block;
+  color: inherit;
+}
+
+.telescope-card a:hover {
+  text-decoration: none;
+}
+
+.telescope-card a:hover .telescope-card-title {
+  color: var(--color-link);
+}
+
+.telescope-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.telescope-card-body {
+  padding: var(--space);
+}
+
+.telescope-card-title {
+  margin: 0 0 0.25em;
+  font-size: 1.1rem;
+}
+
+.telescope-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* Detail pages */
+.page-title {
+  margin-bottom: 1rem;
+}
+
+.detail-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+ul.links {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+ul.links li {
+  margin: 0.5em 0;
+}
+
+/* 404 */
+.not-found main {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.not-found h1 {
+  margin-bottom: 0.5rem;
+}
+
+.not-found p {
+  color: var(--color-muted);
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding-top: var(--space);
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.site-footer .wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space);
+}
